@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+body{
+    height: 100vh;
+    background-image: url(/teamminatobg.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 1.1rem;
+}
+a:hover{
+    color: yellow;
+}
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+.togglebtn{
+    color: silver;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+.actionbtn{
+    background: purple;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+}
+.actionbtn:hover{
+    scale: 1.20;
+}
+.container{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+}
+.searchbar{
+    margin-top: 120px;
+    background: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    height: 80px;
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+    /* backdrop-filter: blur(4px) saturate(180%) ; */
+}
+.searchbar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    color: #cac7ff;
+    font-size: 20px;
+}
+::placeholder{
+    color: black;
+}
+.searchbar button img{
+    width: 30px;       
+}
+.searchbar button{
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: white;
+    cursor: pointer;
+}
+/* Dropdown */
+.dropdown{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    background: grey;
+    /*backdrop-filter: blur(15px); */
+    overflow: hidden;
+
+}
+.dropdown li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.dropdown .actionbtn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+/* Responive */
+@media (max-width: 800px){
+    body{
+        background-image: url(/brothers.jpg);
+    }
+    .navbar .links, .navbar .actionbtn{
+        display: none;
+    }
+    .navbar{
+        justify-content: space-around;
+    }
+    .navbar .togglebtn{
+        display: block;
+    }
+    .dropdown{
+        display: none;
+    }
+    
+}
